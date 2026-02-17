@@ -1,0 +1,48 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<defs>
+	<filter id="blurHeavy" x="-50%" y="-50%" width="200%" height="200%">
+		<feGaussianBlur stdDeviation="30" result="blur"/>
+	</filter>
+	<filter id="blurMedium" x="-50%" y="-50%" width="200%" height="200%">
+		<feGaussianBlur stdDeviation="15" result="blur"/>
+	</filter>
+	<filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+		<feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+		<feFlood flood-color="#ff2a00" flood-opacity="0.9" result="color"/>
+		<feComposite in="color" in2="blur" operator="in" result="shadow"/>
+		<feMerge>
+			<feMergeNode in="shadow"/>
+			<feMergeNode in="SourceGraphic"/>
+		</feMerge>
+	</filter>
+
+	<radialGradient id="fireGradOut" cx="256" cy="256" r="256" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FF5500"/>
+		<stop  offset="0.6" style="stop-color:#D40000"/>
+		<stop  offset="1" style="stop-color:#550000;stop-opacity:0"/>
+	</radialGradient>
+	<radialGradient id="fireGradIn" cx="256" cy="300" r="180" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFF99"/>
+		<stop  offset="0.5" style="stop-color:#FFBB00"/>
+		<stop  offset="1" style="stop-color:#FF4400;stop-opacity:0"/>
+	</radialGradient>
+	<linearGradient id="textGrad" x1="0" y1="400" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FF3300"/>
+		<stop  offset="0.4" style="stop-color:#FFCC00"/>
+		<stop  offset="0.8" style="stop-color:#FFFFCC"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+</defs>
+
+<g style="opacity:0.85;">
+	<ellipse style="filter:url(#blurHeavy);fill:url(#fireGradOut);" cx="256" cy="270" rx="220" ry="200"/>
+	<ellipse style="filter:url(#blurMedium);fill:url(#fireGradIn);" cx="256" cy="280" rx="160" ry="140"/>
+    <path style="filter:url(#blurMedium);fill:url(#fireGradIn);opacity:0.6" d="M150,350 Q256,50 362,350 Q300,250 150,350 Z"/>
+</g>
+
+<g style="filter:url(#textGlow);">
+	<path style="fill:url(#textGrad);stroke:#660000;stroke-width:4;stroke-linejoin:round;" d="M222.1,146.5h-23.3v-23c0-7.2-1.5-11.7-5.2-15.5s-9.6-6.1-18.8-7.9l-13.9,17.5c7.4,1.9,12.1,3.8,13.9,5.7c1.3,1.3,2,3.3,2.3,6v17.2h-21.8v24.4h21.8v22h-25.6v69.3h25.6v67.6c0,9.1-1.9,16-5.5,20.6s-9,7.6-16,9.3l14.3,21.8c11.5-3.3,20.4-8.5,26.5-16s9.1-17.3,9.1-30.3v-73h23.3v74c0,8.4,2,14.8,5.7,19.3s9.6,7.2,17.9,8.4l12.1-21.8c-5.4-1.1-9.1-2.9-11.2-5.5s-3.3-6.5-3.3-12v-62.3h27.4V242h-27.4v-22h24.9V195h-24.9v-24.1h21.8V146.5z M129.8,237h-38.6v-63.8h38.6V237z M116.7,217.9H108v-25h8.6V217.9z M222.1,195h-23.3v22h23.3V195z"/>
+	<path style="fill:url(#textGrad);stroke:#660000;stroke-width:4;stroke-linejoin:round;" d="M275.4,162h-15.5c-2.1-11.5-6.1-22.3-12.1-32l-18.8,10.3c5.2,9.3,8.8,19.1,11,29.4l-10.7,2.1v24.9l10.1-2c-0.6,14.3-2.6,28.3-6,42.3s-8.1,27.2-14.1,39.9l20.1,10c5.7-11.9,10.6-24.6,14.3-38.1c3.8-13.6,6.1-27.8,6.9-42.3h14.8V162z M351,128c-9.6,5.9-20.1,10.8-31.3,14.6l8.6,21c9.6-4.1,18.9-8.8,27.8-14.3L351,128z M417.8,148.8h-62.3v27.7H366v48.1h-20.3v19.8h57.1c6.1,0,10.6-1.1,13.4-3.6s4.3-5.9,4.5-10.5l18.8,4.5c-0.6,8.4-3.3,15.8-8.4,22c-4.5,6.1-12.6,9.1-23.9,9.1h-55.4c-20.6,37.9-47.7,69.3-81.3,94l20.8,18.4c30.6-22,56.2-49.9,76.7-83.9c10.3,16.7,22.6,31.5,36.6,44.4l21.3-19.1c-12.8-11.9-24.1-25.4-33.7-40.6h36.3v-26.8h-18.9v-49h12.6V148.8z M387.5,224.5H366v-23h21.5V224.5z"/>
+</g>
+</svg>
